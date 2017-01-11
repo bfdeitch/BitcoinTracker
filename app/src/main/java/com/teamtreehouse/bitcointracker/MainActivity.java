@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response.body().string());
                     String price = jsonObject.getString("price");
-                    alphanumericDisplay.display(jsonObject.getString("price"));
+                    alphanumericDisplay.display(price);
                     Log.d("Price", price);
                 } catch (JSONException e) {
                     Log.e("Error", e.getMessage());
